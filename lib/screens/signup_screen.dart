@@ -35,11 +35,11 @@ class SignUpScreen extends StatelessWidget {
                       radius: 64,
                       backgroundImage:NetworkImage(
 
-                       'https://images.pexels.com/photos/62640/pexels-photo-62640.jpeg?auto=compress&cs=tinysrgb&w=800' ,
+                        'https://images.pexels.com/photos/62640/pexels-photo-62640.jpeg?auto=compress&cs=tinysrgb&w=800' ,
                       ),
                     ),
                     Positioned(
-                      bottom: -10,
+                        bottom: -10,
                         left: 80,
                         child: IconButton(
                           onPressed: (){},
@@ -51,9 +51,9 @@ class SignUpScreen extends StatelessWidget {
                 SizedBox(height: 20,),
                 //Text field Input for username
                 TextFieldInput(
-                    textEditingController:_userNameController ,
-                    hintText: 'Enter your username',
-                    textInputType: TextInputType.text,
+                  textEditingController:_userNameController ,
+                  hintText: 'Enter your username',
+                  textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 20),
                 //text field input for email
