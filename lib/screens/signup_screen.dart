@@ -28,10 +28,19 @@ class SignUpScreen extends StatelessWidget {
                     height: 64
                 ),
                 const SizedBox(height: 64),
+                //circular widget to accept and show our selected file
+                Stack(
+                  children: [
+                    CircleAvatar(
+                      radius: 64,
+                      backgroundImage: ,
+                    )
+                  ],
+                ),
                 //Text field Input for username
                 TextFieldInput(
                     textEditingController:_userNameController ,
-                    hintText: 'Enter your name',
+                    hintText: 'Enter your username',
                     textInputType: TextInputType.text,
                 ),
                 const SizedBox(height: 20),
@@ -52,10 +61,18 @@ class SignUpScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
+                TextFieldInput(
+                  textEditingController: _bioController,
+                  hintText: 'Enter your bio',
+                  textInputType: TextInputType.text,
+                ),
+
+                const SizedBox(height: 20),
+
                 //button login
                 InkWell(
                   child: Container(
-                    child: const Text('Log in'),
+                    child: const Text('Sign up'),
                     width: double.infinity,
                     alignment: Alignment.center,
                     padding: const EdgeInsets.symmetric(vertical: 12),
@@ -72,26 +89,7 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: 12),
                 Flexible(child: Container(), flex: 2,),
 
-                //Transititioting to signing up
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      child: const Text("Don't have an account?"),
-                      padding: const EdgeInsets.symmetric(vertical: 8,),
-                    ),
-                    GestureDetector(
-                      onTap: (){},
-                      child: Container(
-                        child: const Text(
-                          "Sign up",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                      ),
-                    )
-                  ],
-                )
+
               ],
             ),
           ),
