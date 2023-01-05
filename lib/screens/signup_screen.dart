@@ -31,12 +31,24 @@ class SignUpScreen extends StatelessWidget {
                 //circular widget to accept and show our selected file
                 Stack(
                   children: [
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 64,
-                      backgroundImage: ,
+                      backgroundImage:NetworkImage(
+
+                       'https://images.pexels.com/photos/62640/pexels-photo-62640.jpeg?auto=compress&cs=tinysrgb&w=800' ,
+                      ),
+                    ),
+                    Positioned(
+                      bottom: -10,
+                        left: 80,
+                        child: IconButton(
+                          onPressed: (){},
+                          icon: const Icon(Icons.add_a_photo),
+                        )
                     )
                   ],
                 ),
+                SizedBox(height: 20,),
                 //Text field Input for username
                 TextFieldInput(
                     textEditingController:_userNameController ,
